@@ -1,19 +1,19 @@
 🕰️ Diary Watchdog (Dead Man's Switch)
-A digital safeguard and automated legacy trigger for my personal diary.
+An automated digital safeguard monitoring my personal diary.
 
 📖 About
-This repository acts as an automated "dead man's switch" for my private diary. Its primary function is to continuously monitor my journaling activity. If the system detects no updates or heartbeat signals for 180 consecutive days, it will assume that I have either passed away or encountered a severe, life-altering emergency.
+This repository houses the "dead man's switch" script for my digital legacy. It is a standalone watchdog designed to continuously monitor my journaling activity in a separate, private diary repository.
 
-Upon reaching this critical threshold, the watchdog will execute its final directive: automatically making my private diary Public and marking it as Archived, thereby releasing my digital legacy to the world.
+If this system detects no updates or heartbeat signals in that private diary for 180 consecutive days, it will assume that I have passed away or encountered a severe, life-altering emergency. Upon reaching this critical threshold, this watchdog will automatically change the target diary repository's visibility from Private to Public and mark it as Archived.
 
 ⚙️ How It Works
-Continuous Monitoring: A scheduled automated script (the watchdog) periodically checks the last modified timestamp or commit history of the diary repository.
+Target Monitoring: A scheduled script periodically checks the latest commit history or modification timestamp of my private diary repository via API.
 
-The 180-Day Countdown: The system maintains a strict 180-day timer. Any new diary entry, commit, or manual heartbeat signal instantly resets this countdown to zero.
+The 180-Day Countdown: The system maintains a strict 180-day timer. Any new update in the diary repo instantly resets this countdown to zero.
 
-The Trigger Protocol: If the timer reaches exactly 180 days without any interruption or reset, the failsafe is activated.
+The Trigger Protocol: If the timer reaches exactly 180 days without any interruption, the failsafe is activated.
 
-Final Action: The script utilizes API tokens to automatically change the diary repository's visibility settings from Private to Public and locks it as a read-only Archive.
+Final Action: The watchdog executes its final directive, using predefined tokens to publish the target diary repository, releasing my unfiltered thoughts and final footprint to the world as a read-only archive.
 
-⚠️ To the Reader
-If you are reading the contents of my published diary, it means this failsafe has been triggered and I am no longer able to maintain it. The archived records represent my unfiltered thoughts, experiences, and my final footprint in the digital world.
+⚠️ Note to Visitors
+You are currently viewing the open-source watchdog repository. Reading this README simply means you have found my automated safeguard system—my actual diary remains completely private and hidden. If you are ever able to access the separate diary repository, it means the 180-day failsafe has been triggered and I am no longer able to maintain it.
